@@ -17,33 +17,34 @@ export default function Blog({ posts }) {
       <Head>
         <title>Levelite — Blog</title>
       </Head>
-      <PageTitle title="blog" stretchedLetter="b" overlayTitle="patch-notes | events | articles" />
+      <PageTitle
+        title="blog"
+        stretchedLetter="b"
+        overlayTitle="patch-notes | events | articles"
+      />
       <MainWrapper>
-      <Zoom>
-  <>
-    {(posts || []).map((post, index) => {
-      return (
-        <Tilt
-          tiltReverse={true}
-          tiltMaxAngleX={5}
-          tiltMaxAngleY={5}
-          gyroscope={true}
-          key={index}
-        >
-          <PostCard
-            date={post.data.date}
-            title={post.data.title}
-            image={post.data.image}
-            description={post.data.description}
-            categories={post.data.tags}
-            onClick={() => router.push(`/blog/${post.slug}`)}
-          />
-        </Tilt>
-      );
-    })}
-  </>
-</Zoom>
-
+        <Zoom>
+            {(posts || []).map((post, index) => {
+              return (
+                <Tilt
+                  tiltReverse={true}
+                  tiltMaxAngleX={5}
+                  tiltMaxAngleY={5}
+                  gyroscope={true}
+                  key={index}
+                >
+                  <PostCard
+                    date={post.data.date}
+                    title={post.data.title}
+                    image={post.data.image}
+                    description={post.data.description}
+                    categories={post.data.tags}
+                    onClick={() => router.push(`/blog/${post.slug}`)}
+                  />
+                </Tilt>
+              );
+            })}
+        </Zoom>
       </MainWrapper>
     </Container>
   );

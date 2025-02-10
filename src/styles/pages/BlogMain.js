@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   padding: 130px 0;
   margin: 0 auto;
   gap: 40px;
@@ -12,8 +13,8 @@ export const Container = styled.div`
 
 export const MainWrapper = styled.div`
   display: flex;
+  width: 100%;
   justify-content: center;
   flex-direction: row;
-  flex-wrap: wrap;
   gap: 20px;
 `;
