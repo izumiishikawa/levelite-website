@@ -60,15 +60,15 @@ function Hero() {
         </Main>
         <HeroFooter>
           <Fade left delay={800}>
-            <ViewButton className="flex p-4" onClick={() => router.push("/about")}>
+            <ViewButton className="flex p-4"  onClick={() => window.open("https://play.google.com/store/apps/details?id=com.satsukiizumi.leveliteapp", "_blank")}>
               <IoLogoGooglePlaystore /> Play Store
             </ViewButton>
           </Fade>
-          <Fade right delay={800}>
+          {/* <Fade right delay={800}>
             <ViewButton className="flex p-4" onClick={() => router.push("/about")}>
               <IoLogoAppleAppstore /> Apple Store
             </ViewButton>
-          </Fade>
+          </Fade> */}
         </HeroFooter>
       </Wrapper>
     </Container>
